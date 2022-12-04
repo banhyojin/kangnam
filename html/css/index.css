@@ -1,0 +1,261 @@
+* {
+    margin: 0; padding: 0;
+    list-style: none;
+ }
+a { text-decoration: none; color: black; }
+
+nav {
+    width: 100%; height: 50px;
+    border: 1px solid #f2f2f2;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    background: rgb(25,46,74);
+}
+
+/*주 메뉴의 박스*/
+nav> div {
+    position: relative;
+    top: 0; left: 0;
+
+    width: 10%; height: 100%;
+    border: 0px solid red;
+    text-align: center;
+    line-height: 50px;
+    
+}
+
+/*첫 주 메뉴*/
+nav> div:nth-child(1) {
+    margin-right: 5%;
+}
+/*마지막 메뉴 삼선바*/
+nav> div:last-child {
+    margin-left: 5%;
+}
+
+
+/*주 메뉴에서 보여지는 글자*/
+nav> div> p {
+    width: 100%; height: 100%;
+    color: white;
+}
+/*주 메뉴 속에 들어있는 서브 메뉴 박스*/
+nav> div:hover> .menu {
+    display: block;
+}
+nav> div> .menu {
+    position: absolute;
+    top: 100%; 
+
+    width: 1050%; height: 200px;
+    border: 1px solid black;
+    display: none;
+    background: rgb(25,46,74);
+}
+/*서브메뉴 박스 중에 첫 번째 박스*/
+nav> div> .menu> .sub1 {
+    float: left; height: 100%;
+}
+/*서브메뉴 박스 중에 두 번째 박스 (배경그림)*/
+nav> div> .menu> .sub2 {
+    float: right; height: 100%;
+}
+/*주 메뉴 속에 들어있는 0번박스*/
+nav> div> .menu0 {
+    display: block;
+    left: -100%;
+}
+/*주 메뉴 속에 들어있는 1번박스*/
+nav> div> .menu1 {
+    left: -355%;
+}
+/*주 메뉴 속에 들어있는 2번박스*/
+nav> div> .menu2 {
+    left: -455%;
+}
+/*주 메뉴 속에 들어있는 3번박스*/
+nav> div> .menu3 {
+    left: -555%;
+}
+/*주 메뉴 속에 들어있는 4번박스*/
+nav> div> .menu4 {
+    left: -655%;
+}
+/*주 메뉴 속에 들어있는 5번박스*/
+nav> div> .menu5 {
+    left: -755%;
+}
+/*서브 메뉴 박스 속에 있는 요소(항목)*/
+nav> div> .menu> li { /*.sub1, .sub2*/
+    outline: 0px solid red;
+    width: 50%;
+    
+}
+
+nav> div> .menu> li> div {
+    outline: 0px solid blue;
+    width: 70%;
+    margin: 10px auto;
+    color: white;
+    opacity: 0.7;
+}
+
+nav> div> .menu> li> div:hover {
+    opacity: 1;
+}
+/*문서 연결태그*/
+nav> div> .menu> li> div> a {
+    display: block;
+    width: 100%; height: 100%;
+    border: 0px solid white;
+    color: white;
+}
+
+nav> div> .menu> li> img {
+    height: 100%;
+}
+
+
+
+
+
+
+/*삼선 바*/
+nav> .bar {
+    position: relative; top: 0; left: 0;
+    z-index: 0%;
+    display: none;
+}
+/*모바일 전체메뉴 박스*/
+nav> .bar> .subBox {
+    position: absolute;
+    top: 40px; left: 110%;
+
+    width: 100%; height: 2000px;
+    background: rgb(25,46,74);
+    border: 0px solid white;
+}
+/*모바일 주메뉴 박스*/
+nav> .bar> .subBox> .subM {
+    width: 100%;
+    border: 0px solid white;
+    color: white;
+    margin-bottom: 1px;
+
+}
+nav> .bar> .subBox> .subM> p {
+    width: 100%; height: 50px;
+    border: 0px solid red;
+}
+
+nav> .bar> .subBox> .subM0 {
+    margin-top: 50px;
+}
+
+/*닫기*/
+nav> .bar> .subBox> .close {
+    width: 70px; height: 50px;
+    border: 1px solid white;
+    color: white;
+    margin: 50px;
+    margin-left: 65%;
+   
+}
+
+
+nav> .bar:hover .subBox {
+    left: 0;
+}
+
+nav> .bar> .subBox> .subM:hover>p {
+    background: skyblue;
+}
+
+
+nav> .bar> .subBox> .subM:hover> .Mmenu {
+    height: 130px;
+}
+nav> .bar> .subBox> .subM:hover> .Mmenu4,
+nav> .bar> .subBox> .subM:hover> .Mmenu5 {
+    height: 90px;
+}
+
+
+nav> .bar> .subBox> .subM> .Mmenu {
+    width: 100%; height: 0;
+    overflow: hidden;
+    border: 0px solid white;
+    transition: all 0.5s;
+}
+
+nav> .bar> .subBox> .subM> .Mmenu li{
+    width: 100%; height: 40px;
+    line-height: 40px;
+}
+
+
+nav> .bar> .subBox> .subM> .Mmenu li:hover {
+    background: seashell; color: black;
+}
+
+nav> .bar> .subBox> .subM> .Mmenu li> a {
+    display: block;
+    width: 100%; height: 100%;
+    line-height: 40px;
+    color: white;
+}
+nav> .bar> .subBox> .subM> .Mmenu li> a:hover {
+    background: seashell; color: black;
+}
+
+
+
+/*pc 본문*/
+.at {
+    width: 100%; height: 650px;
+    background: black; color: white;
+    padding: 100px;
+}
+.at> p {
+    width: 100%; height: 100px;
+    line-height: 100px;
+    border: 0px solid white;
+    font-size: 2.5rem;
+}
+.at> .title {
+    font-family: hy견고딕;
+}
+.at> .imgbox {
+    width: 100%; 
+    display: flex; flex-wrap: wrap;
+    border: 0px solid white;
+    justify-content: space-evenly;
+}
+
+.at> .imgbox> li {
+    width: 30%; height: 300px;
+    border: 1px solid white;
+    color: white;
+    margin-bottom: 50px;
+}
+.at> .imgbox> li> div {
+    width: 100%; height: 220px;
+    border: 1px solid red;
+}
+.at> .imgbox> li> div> img {
+    width: 100%; height: 100%;
+    border-radius: 20PX;
+
+}
+.at> .imgbox> li> p {
+    font-size: 1rem;
+    width: 100%; height: 30px;
+    line-height: 20px;
+}
+.at> .imgbox> li> .imgbox_text1 {
+    height: 50px;
+    font-size: 1rem;
+    line-height: 50px;
+}
+
